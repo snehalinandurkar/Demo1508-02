@@ -1,0 +1,10 @@
+      <Application 
+          Deployed="true" 
+          Name="SelfService"
+          Path="./applications">
+          <WebAppComponent 
+              Name="SelfService" 
+              PreferWebInfClasses="true"
+              Targets="myserver" 
+              URI="SelfService"/>
+      </Application>

@@ -1,0 +1,145 @@
+#
+# Self Service Configuration File
+#
+# General Settings:
+# URL of the XAI server
+com.splwg.selfservice.XAIServerURL=http://steamccbapp:9500/XAIApp/xaiserver
+# Override properties file
+com.splwg.selfservice.OverrideProperties=CMSelfServiceConfig.properties
+# User Id in CorDaptix that the Self Service application should assume
+com.splwg.selfservice.CorDaptixUser=WEB
+# Authorization string for the XAI server. This is the WebLogic user & password in Base64.
+# For user WEB, password selfservice the string is:
+com.splwg.selfservice.XAICookie=V0VCOnNlbGZzZXJ2aWNl
+# Person Identifier Type to be used in CorDaptix for storing the user id
+com.splwg.selfservice.IdType=WEB
+# Authentication Plug In Settings:
+# Whether a class different than the default is performing the authentication (valid values true, false)
+com.splwg.selfservice.Authentication=false
+# Dynamic class name for Authentication
+com.splwg.selfservice.AuthenticationClassName=com.splwg.selfservice.DummyAuthentication
+# Doc1 PDF Settings:
+# Whether 'View' should be displayed next to the last bill in the Account Information screen (valid values true, false)
+com.splwg.selfservice.ShowBill=true
+# URL prefix for online bill PDFs
+com.splwg.selfservice.OnlineBillURLPrefix=http://steamccbapp:9500/XAIApp
+# Timeout (in minutes) for cached bill PDFs
+com.splwg.selfservice.PDFCacheTimeout=60
+# Directory to be used for cached bill PDFs
+#
+# Use this parameter if you want to specify the location for the PDF cache.
+# If it is omitted, the default temporary directory will be used.
+#
+# com.splwg.selfservice.PDFCacheLocation=C:\\TEMP
+# Customer Contact Class and Type Settings:
+#
+# Use 'NONE' for the type, if you don't want to add customer contact:
+# e.g. com.splwg.selfservice.CustomerContactTypeLoginSuccess=NONE
+# Customer Contact Class in CorDaptix to be used when creating customer contacts for successful logins
+com.splwg.selfservice.CustomerContactClassLoginSuccess=NONE
+# Customer Contact Type for a successful login
+com.splwg.selfservice.CustomerContactTypeLoginSuccess=NONE
+# Customer Contact Class in CorDaptix to be used when creating customer contacts for failed logins
+com.splwg.selfservice.CustomerContactClassLoginFailure=NONE
+# Customer Contact Type for a failed login attempt
+com.splwg.selfservice.CustomerContactTypeLoginFailure=NONE
+# Customer Contact Class in CorDaptix to be used when creating customer contacts for registrations
+com.splwg.selfservice.CustomerContactClassRegistration=NONE
+# Customer Contact Type for a successful registration
+com.splwg.selfservice.CustomerContactTypeRegistration=NONE
+# Customer Contact Class in CorDaptix to be used when creating customer contacts for the update of the personal info
+com.splwg.selfservice.CustomerContactClassPersonalInfoUpdate=NONE
+# Customer Contact Type for an update of personal info
+com.splwg.selfservice.CustomerContactTypePersonalInfoUpdate=NONE
+# Customer Contact Class in CorDaptix to be used when creating customer contacts service stops
+com.splwg.selfservice.CustomerContactClassServiceDisconnect=NONE
+# Customer Contact Type for disconnecting service
+com.splwg.selfservice.CustomerContactTypeServiceDisconnect=NONE
+# Customer Contact Class in CorDaptix to be used when creating customer contacts for received payments
+com.splwg.selfservice.CustomerContactClassPaymentReceived=NONE
+# Customer Contact Type for performed payment
+com.splwg.selfservice.CustomerContactTypePaymentReceived=NONE
+# Customer Contact Class in CorDaptix to be used when creating customer contacts for the creation of meter reads
+com.splwg.selfservice.CustomerContactClassMeterRead=NONE
+# Customer Contact Type for new meter read
+com.splwg.selfservice.CustomerContactTypeMeterRead=NONE
+# To Do Type Settings:
+#
+# Use 'NONE' for Type, if you don't want the ToDo Type to be created:
+# e.g.: com.splwg.selfservice.MeterReadToDoType=NONE
+# To Do Type for Meter Reads failing High/Low
+com.splwg.selfservice.MeterReadToDoType=NONE
+# To Do Type for Service Stop
+com.splwg.selfservice.ServiceStopToDoType=NONE
+# To Do Type for Update Personal Information
+com.splwg.selfservice.PersonalInfoToDoType=NONE
+# To Do Type for Administrator Information
+com.splwg.selfservice.AdminToDoType=CI_WSSAD
+# Payment related Settings:
+# Auto Pay Source Codes for Credit Cards:
+# Auto Pay Source Code for Visa
+com.splwg.selfservice.AutoPay.Visa=VISA
+# Auto Pay Source Code for MasterCard
+com.splwg.selfservice.AutoPay.MasterCard=MASTERCARD
+# Auto Pay Source Code for Discover
+com.splwg.selfservice.AutoPay.Discover=DISCOVER
+# Auto Pay Source Code for AmericanExpress
+com.splwg.selfservice.AutoPay.AmericanExpress=AMEX
+# Credit Card Validation Plug In Settings:
+# Whether a class is validating the credit card (valid values true, false)
+com.splwg.selfservice.CreditCardValidation=true
+# Dynamic class name for CreditCardValidation
+com.splwg.selfservice.CreditCardValidationClassName=com.splwg.selfservice.DummyCreditCardValidation
+# Meter Read related Settings:
+# Which Meter Read Source should be used
+com.splwg.selfservice.MeterReadSource=WEB
+# Location related Settings:
+# CorDaptix phone type used for home phone numbers
+com.splwg.selfservice.PhoneTypeHome=PRIMARY
+# CorDaptix phone type used for business phone numbers
+com.splwg.selfservice.PhoneTypeBusiness=SECONDARY
+# Phone format used on Update Personal Information screen
+com.splwg.selfservice.PhoneFormat=(999) 999-9999
+# Date format used by XAI (set in XAI Formats control table) for dates sent to XAI
+com.splwg.selfservice.XAIDateFormat=yyyy-MM-dd
+# Date format used to display dates received from XAI
+com.splwg.selfservice.CorDaptixDateFormat=MM-dd-yyyy
+# Date-Time format used by XAI (set in XAI Formats control table) for Date/Time sent to XAI
+com.splwg.selfservice.XAIDateTimeFormat=yyyy-MM-dd HH:mm:ss
+# Date-Time format used to display date/times received from XAI
+com.splwg.selfservice.CorDaptixDateTimeFormat=MM-dd-yyyy HH:mm:ss
+# Number format to be used for Amounts sent to XAI
+com.splwg.selfservice.XAINumberFormat=#####0.00
+# Number format to be used to display amounts received from XAI (should be identical to the display profile used)
+com.splwg.selfservice.CorDaptixNumberFormat=###,##0.00
+# E-Mail related Settings:
+ 
+# Whether an email will be sent (should be set to false when no SMTP server can be reached); valid values: true, false
+com.splwg.selfservice.SendEmail=true
+# Location of file with email info:
+com.splwg.selfservice.EmailFileLocation=EmailFile.txt
+# Subject of Mail
+com.splwg.selfservice.EmailSubject=Your User and Password
+# Location of file with registration email info:
+com.splwg.selfservice.RegistrationEmailFileLocation=RegistrationEmailFile.txt
+# Subject of Registration Mail
+com.splwg.selfservice.RegistrationEmailSubject=Con Edison: Your registered User and Password
+# Address of Mail SMTP Host:
+com.splwg.selfservice.SMTPHost=EXCHSMTP.conedison.net
+# From Address:
+com.splwg.selfservice.FromAddress=steam@coned.com
+# Phone Label related settings:
+# Customer Info Zone Home Phone Label
+com.splwg.selfservice.CustomerInformationHomePhone=Primary telephone number
+# Customer Info Zone Business Phone Label
+com.splwg.selfservice.CustomerInformationBusinessPhone=Secondary telephone number
+# Customer Info Zone Email Address Label
+com.splwg.selfservice.CustomerInformationEmailAddress=Email Address
+# Actions:
+# The following section allows the dynamic definition of additional actions. The property name must start with 
+# "com.splwg.selfservice.Action" and after that it contains the action name. The property value is the class name.
+# Following two examples:
+#com.splwg.selfservice.Action.financialhistory=com.splwg.selfservice.AccountFinancialHistoryAction
+#com.splwg.selfservice.Action.billinghistory=com.splwg.selfservice.BillingHistoryAction
+#com.splwg.selfservice.Action.SUserAuthenticate=com.splwg.selfservice.CMSSvcSUserAuthenticateAction
+#com.splwg.selfservice.Action.SUserLogin=com.splwg.selfservice.CMSSvcSULoginAction

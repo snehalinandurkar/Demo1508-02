@@ -1,0 +1,542 @@
+.normal, headerRow, .grid, .gridAlt,.gridTd, .button, input, select, textarea {
+    font-family: Tahoma, 'MS Sans Serif', sans-serif;
+    font-size: 11px;
+    vertical-align: middle;
+}
+.wssBody {
+    margin: 2;
+    topmargin="0";
+    leftmargin="0";
+    link="#0090DD";
+    vlink="#0090DD";
+    alink="#116edf";
+} 
+.wssDivMain,.wssDivMainSmall, .wssDivMainLarge, .wssDivMainPersonalInfo, .wssDivSub , .wssDivSubResult, .wssDivSubAccount,.wssDivStopService, wssDivAddress, 
+.wssDivMainLong{
+  z-index:1; visibility: visible; overflow: auto; 
+  border: 1px none ;
+} 
+
+.defaultColor,.wssDivMain,  .wssDivMainSmall,.wssDivMainPersonalInfo, .wssDivSub , .wssDivSubResult, .wssDivSubAccount,.wssDivStopService, wssDivAddress, 
+ .wssDivReg,.wssDivMainLong,  .wssDivStopService,.wssDivMainStop,  .wssTableSimple, .wssTableMajor, .wssTableMinor, .wssTableMinor2, .wssTableLarge, .wssTable650 {
+  background-color: #cee9f8;
+  layer-background-color: #cee9f8;
+} 
+
+.wssDivMain, wssDivMainStop {
+  position:absolute; left:210px; top:110px; width:540px; height:420px;
+  border: 1px none;
+}
+
+.wssDivMainSmall {
+  position:absolute; left:210px; top:110px; width:540px; height:260px;
+}
+
+.wssDivMainLarge {
+  position:absolute; left:210px; top:110px; width:540px; height:450px;
+  border: 1px none;
+}
+
+.wssDivMainPersonalInfo {
+  position:absolute; left:210px; top:110px; width:540px; height:480px;
+  border: 1px none ;  
+}
+
+.wssDivSub {
+  position:relative; left:3px; top:0px; width:530px; height:305px;
+}
+
+.wssDivSubAccount {
+  position:relative; left:2px; top:0px; width:760px; height:120px;
+}
+
+.wssDivSubResult {
+  position:relative; left:2px; top:0px; width:760px; height:240px;
+}
+
+.wssDivStopService {
+  position:relative; left:2px; top:0px; width:527px; height:250px;
+}
+
+.wssDivAddress {
+  position:relative; left:2px; top:0px; width:400px; height:180px;
+}
+
+.wssDivMainLong {
+  position:absolute; left:210px; top:110px; width:780px; height:530px;
+}
+
+.wssDivSec {
+  text-align:left; 
+}
+
+.wssDivReg {
+  position:absolute; left:17px; height:280px;
+  
+  border: 1px none;
+}
+/* Table */
+.wssTableMinor, .wssTableLarge {
+/*
+	border-top: 1px solid gray;
+	border-right: 1px solid gray;
+	border-bottom: 1px solid gray;
+	border-left: 1px solid gray;
+*/
+}
+  .wssTableLarge {
+	border: "1"; 
+	width: "735"; 
+	text-align: "left"; 
+	cellspacing: "0";
+ 	cellpadding: "0";
+/*
+	border-top: 1px solid gray;
+	border-right: 1px solid gray;
+	border-bottom: 1px solid gray;
+	border-left: 1px solid gray;
+*/
+}
+
+  .wssTable700 {
+	border: "0"; 
+	width: "750"; 
+	text-align: "left"; 
+	cellspacing: "0";
+ 	cellpadding: "0";
+}
+
+
+  .wssTableMajor {
+	border: "1"; 
+	width: "515"; 
+	text-align: "left"; 
+	cellspacing: "0";
+ 	cellpadding: "0";
+}
+
+  .wssTable750TL100 {
+	border: "0"; 
+	width: "750";
+	text-align: "left";
+	vertical-align: "top"; 
+	cellspacing: "0";
+ 	cellpadding: "0";
+}
+
+  .wssTable0 {
+	text-align: "left";
+	border: "0"; 
+	cellspacing: "0";
+ 	cellpadding: "0";
+}
+  .wssTableMinor100 {
+	border: "0"; 
+	width: "100%"; 
+	text-align: "left"; 
+	cellspacing: "0";
+	cellpadding: "0";
+}
+
+  .wssTableMinor {
+	border : "1";
+	width: "500"; 
+	cellpadding : "0"; 
+	cellspacing:"5";
+}
+
+  .wssTable650 {
+	border : "1";
+	width: "650"; 
+	cellpadding : "0"; 
+	cellspacing:"5";
+}
+
+  .wssTableMinor2 {
+	border : "1";
+	width: "515"; 
+	cellpadding : "0"; 
+	cellspacing:"5";
+/*
+	border-top: 1px solid gray;
+	border-right: 1px solid gray;
+	border-bottom: 1px solid gray;
+	border-left: 1px solid gray;
+*/
+}
+
+  .wssTableMinor2 {
+	border : "0";
+	cellpadding : "0"; 
+	cellspacing:"5";
+}
+
+/* TD */
+
+  .wssTDMain {
+	vertical-align:middle;
+ 	text-align:center; 
+	height:40; 
+	width:540;
+	color:black;
+
+}
+
+  .wssTD100 {
+	width : 100%;
+}
+
+  .wssTD210MidLeft {
+	width : "210";
+	vertical-align : "middle"; 
+	text-align : "left";
+}
+
+  .wssTDWhiteMidLeft {
+	vertical-align: middle; 
+	text-align: left;
+}
+
+  .wssTDMidCenter {
+	vertical-align : middle; 
+	text-align : center;
+}
+
+  .wssTDMidLeft {
+	vertical-align : middle; 
+	text-align : left;
+}
+
+  .wssTDMidRight {
+	vertical-align : middle; 
+	text-align : right;
+}
+
+  .wssTDMidCenter2 {
+	vertical-align : middle; 
+	text-align : center;
+	colspan : 2;
+}
+
+  .wssTDMidCenter4 {
+	vertical-align : middle; 
+	text-align : center;
+	column-span : 4;
+}
+
+  .wssTDMidLeft2 {
+	vertical-align : middle; 
+	text-align : left;
+	colspan : 2;
+}
+
+  .wssTD25%MidCenter {
+	width : 25%; 
+	vertical-align : middle; 
+	text-align : center;
+}
+
+  .wssTD50MidCenter {
+	width : 50; 
+	vertical-align : middle; 
+	text-align : center;
+    
+}
+
+  .wssTDMidCenterH50 {
+	height : 50; 
+	vertical-align : middle; 
+	text-align : center;
+}
+
+  .wssTD50%MidCenter {
+	width : 50%; 
+	vertical-align : middle; 
+	text-align : center;
+}
+
+  .wssTD60MidCenter {
+	width : 60; 
+	vertical-align : middle; 
+	text-align : center;
+   
+}
+
+  .wssTD70MidCenter {
+	width : 70; 
+	vertical-align : middle; 
+	text-align : center;
+}
+
+  .wssTD90MidCenter {
+	width : 90; 
+	vertical-align : middle; 
+	text-align : center;
+}
+
+  .wssTD140MidCenter {
+	width : 130; 
+	vertical-align : middle; 
+	text-align : center;
+}
+
+  .wssTD200MidCenter {
+	width : 200; 
+	vertical-align : middle; 
+	text-align : center;
+}
+
+  .wssTD174MidLeft {
+	width : 174; 
+	vertical-align : middle; 
+	text-align : left;
+}
+
+  .wssTDMidLeftF {
+	vertical-align : middle; 
+	text-align : left;
+}
+
+  .wssTDMidCenterF {
+	vertical-align : middle; 
+	text-align : center;
+}
+
+  .wssTDMidRightF {
+	vertical-align : middle; 
+	text-align : right;
+    
+}
+
+  .wssTD501MidCenter {
+	width : 501; 
+	vertical-align : middle; 
+	text-align : center;
+	colspan : 2;
+    
+}
+
+  .wssTD501MidLeft {
+	width : 501; 
+	vertical-align : middle; 
+	text-align : left;
+	colspan : 3;
+    
+}
+
+  .wssTD319MidCenter {
+	width : 319; 
+	vertical-align : middle; 
+	text-align : center;
+	colspan : 2;
+    
+}
+
+  .wssTD319MidLeft42 {
+	width : 319; 
+	vertical-align : middle; 
+	text-align : left;
+	rowspan : 4;
+	colspan : 2;
+}
+
+ .wssTD156 {
+	width : 156; 
+}
+
+  .wssTD25%MidCenterF {
+	width : 25%; 
+	vertical-align : middle; 
+	text-align : center;
+}
+
+  .wssTD50MidCenterF {
+	width : 50; 
+	vertical-align : middle; 
+	text-align : center;
+}
+
+  .wssTD50%MidCenterF {
+	width : 50%; 
+	vertical-align : middle; 
+	text-align : center;
+}
+
+  .wssTD60MidCenterF {
+	width : 60; 
+	vertical-align : middle; 
+	text-align : center;
+}
+
+  .wssTD70MidCenterF {
+	width : 70; 
+	vertical-align : middle; 
+	text-align : center;
+    
+}
+
+  .wssTD70MidRightF {
+	width : 70; 
+	vertical-align : middle; 
+	text-align : right;
+    
+}
+
+  .wssTD60MidRightF {
+	width : 70; 
+	vertical-align : middle; 
+	text-align : right;
+    
+}
+
+  .wssTD90MidCenterF {
+	width : 90; 
+	vertical-align : middle; 
+	text-align : center;
+    
+}
+
+ .wssTD140MidCenterF {
+	width : 140; 
+	vertical-align : middle; 
+	text-align : center;
+    
+}
+
+ .wssTDMidJustifyF {
+	vertical-align : middle; 
+	text-align : center;
+    
+}
+
+ .wssTD200MidCenterF {
+	width : 200; 
+	vertical-align : middle; 
+	text-align : center;
+    
+}
+
+  .wssTD25MidRightF {
+	width : 25%; 
+	vertical-align : middle; 
+	text-align : right;
+    
+}
+
+  .wssTDTopLeft {
+	vertical-align : top; 
+	text-align : left;
+    
+}
+
+/* Font */
+
+  .wssFontArial1 {
+	color: Black;  
+	font-family: Tahoma, 'MS Sans Serif', sans-serif;
+	font-size : "10";
+}
+
+
+  .wssFontArial2 {
+	 color: Black; 
+	 font-family: Tahoma, 'MS Sans Serif', sans-serif;
+    font-size: 11px;
+}
+
+  .wssFontArial3 {
+ 	font : "Arial";
+	font-size : "16";
+}
+
+  .wssFontArial5 {
+	color: Black; 
+   font-family: Tahoma, 'MS Sans Serif', sans-serif;
+	font-size: "28";
+}
+
+
+.grid {
+    background: white;
+    color: black;
+    bordercolor: 1px #0090DD;
+}
+
+
+
+.gridAlt {
+    background: #f1faff;
+    color: black;
+    bordercolor: 1px #0090DD;
+}
+
+.headerRow {
+    background: white;
+    color: black;
+}
+
+.gridLabel, .zoneGridLabel {
+    color: black;
+	background: #caf090;
+    font-family: Tahoma, 'MS Sans Serif', sans-serif;
+    font-size: 11px;
+/*
+    background: #d8cea0;
+    color: #FFFFCC;;
+    font-family: Arial, sans-serif;
+    font-size: 75%;
+    font-weight: bold;
+    background-color: #0C2B57;
+    background-image: url("/images/gHeader.png");
+    background-repeat: repeat-x;
+*/
+}
+
+.gridTd {
+    line-height: 1.35em;
+    /* border-right: 1px solid gray; */
+    padding-left: 1px;
+    
+}
+
+.label {
+    color: black;
+    font-family: Tahoma, 'MS Sans Serif', sans-serif;
+    font-size: 11px;
+    font-weight: bold;
+    vertical-align: middle;
+}
+
+.Captchalabel {
+    color: black;
+    font-family: Tahoma, 'MS Sans Serif', sans-serif;
+    font-size: 11px;
+    font-weight: bold;
+    vertical-align: top;
+}
+
+.button {
+    background: #0090DD;
+    border: white thin outset;
+    color: white;
+    font-weight: bold;
+}
+.tablewithborder {
+    border-width: 2px;
+    border-style: ridge;
+}
+table#dataTable {
+    border: "1"; 
+    border-bottom: 1px solid gray;
+}
+
+.menuTd {
+line-height: 2.0em;
+
+}
+.menuItemSelected {
+
+}
+
+.menuItemNotSelected {
+}

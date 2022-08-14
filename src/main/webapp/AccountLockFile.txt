@@ -1,0 +1,11 @@
+Steam Customer:
+
+Your user id '@user@' has been locked due to too many incorrect login attempts.
+
+This lock will clear in an hour.  If you did not attempt a login or have questions,
+feel free to contact us at (212)780-8855.
+
+Sincerely,
+
+Customer Operations
+Consolidated Edison Company of New York

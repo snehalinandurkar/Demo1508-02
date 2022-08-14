@@ -1,0 +1,257 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" %>
+<%@ page import="java.util.*" %>
+<%@ page import="com.splwg.selfservice.*" %>
+<html>
+<head>
+<title>Satellite Plan</title>
+<%@include file="IncPreamble.jsp" %>
+<%@include file="CIMenu.jsp" %>
+<%@include file="CMMenu.jsp" %>
+<%@include file="Menu.jsp" %>
+
+<jsp:useBean
+  id="accountInfo"
+  scope="request"
+  class="com.splwg.selfservice.ControlCentralBean">
+</jsp:useBean>
+<jsp:useBean
+  id="alPlan"
+  scope="request"
+  class="com.splwg.selfservice.SubscriberPlansAndResultsBean">
+</jsp:useBean>
+<jsp:useBean
+  id="SelfService_validUser"
+  scope="session"
+  class="com.splwg.selfservice.ValidUserBean">
+</jsp:useBean>
+<jsp:useBean
+  id="mode"
+  scope="request"
+  class="java.lang.String">
+</jsp:useBean>
+<jsp:useBean
+  id="errorMessage"
+  scope="request"
+  class="java.lang.String">
+</jsp:useBean>
+
+<script type="text/javascript">
+  var index = 0;
+  function add() {
+    var row = document.createElement("tr");
+    var td1 = document.createElement("td");
+    var td2 = document.createElement("td");
+    var td3 = document.createElement("td");
+
+    var inp1 = document.createElement("input");
+    inp1.setAttribute("type", "text");
+    inp1.setAttribute("name", "seq"+index);
+    inp1.setAttribute("size", "40");
+    inp1.setAttribute("maxlength", "10");
+    inp1.setAttribute("value", index);
+    inp1.setAttribute("class", "inputTextNew");
+
+    var inp2 = document.createElement("input");
+    inp2.setAttribute("type", "text");
+    inp2.setAttribute("name", "acct"+index);
+    inp2.setAttribute("id", "acct"+index);
+    inp2.setAttribute("size", "40");
+    inp2.setAttribute("maxlength", "15");
+    inp2.setAttribute("class", "inputTextNew");
+
+    var inp3 = document.createElement("input");
+    inp3.setAttribute("type", "text");
+    inp3.setAttribute("name", "perc"+index);
+    inp3.setAttribute("size", "40");
+    inp3.setAttribute("maxlength", "10");
+    inp3.setAttribute("class", "inputTextNew");
+    inp3.setAttribute("id", "perc"+index);
+    inp3.setAttribute("onchange", "sum();");
+    <% if (alPlan.getIsListBased()) { %>
+    inp3.style.visibility = "hidden";
+    <% } %>
+
+    td1.appendChild(inp1);
+    td2.appendChild(inp2);
+    td3.appendChild(inp3);
+
+    row.appendChild(td1);
+    row.appendChild(td2);
+    row.appendChild(td3);
+
+    var table = document.getElementById("table1");
+    table.appendChild(row);
+
+    index++;
+  }
+
+  function sum() {
+    var s=0.0;
+    var x;
+
+    for (x=1; x<index; x++) {
+        var ele = document.getElementById("perc"+x);
+        s = s+parseFloat(ele.value);
+    } 
+    var total_ele = document.getElementById("total");
+    total_ele.value = s;
+  }
+
+  function validForm() {
+    var x;
+    var l;
+    for (x=1; x<index; x++) {
+        var ele = document.getElementById("acct"+x);
+        if (ele.value.trim().length!=15 && ele.value.trim().length!=0) {
+            alert("Sequence "+x.toString()+" account must be 15 digits");
+            return false;
+        }
+    } 
+    return true;
+  }
+</script>
+
+</head>
+<%--
+--%>
+<body class="wssBody">
+<form name=Form1 action="subscribersave" method="post" onSubmit="return validForm()">
+<%@include file="ErrorHandler.jsp" %>
+<div id="Content" class="wssDivMainLong">
+  <table class="wssTableLarge">
+    <tr>
+      <td class="wssTD100">
+        <table class="wssTableMinor">
+	     <tr>
+	      <td class="wssTD100">
+	        <table class="wssTableMinor" >
+            <tr class="headerRow">
+              <td class="label">Web Self Service ID</td>
+              <td class="wssTDWhiteMidLeft"><font class="wssFontArial2">
+  		<jsp:getProperty name="accountInfo" property="accountId" /></font></td>
+            </tr>
+            <tr class="headerRow">
+              <td class="label">Account Number</td>
+              <td class="wssTDWhiteMidLeft"><font class="wssFontArial2">
+  		<jsp:getProperty name="alPlan" property="cssAcctId" /></font></td>
+            </tr>
+            <tr  class="headerRow">
+              <td class="label">Customer Name</td>
+              <td class="wssTDWhiteMidLeft"><font class="wssFontArial2">
+		<jsp:getProperty name="accountInfo" property="entityName" /></font></td>
+            </tr>
+		</table>
+		<tr></tr>
+	       <table class="wssTable650">
+	          <tr class="grid">
+	            <td class="label">&nbsp;Host ID</td>
+	            <td class="gridTd">
+					<jsp:getProperty name="alPlan" property="hostAllocationId" />&nbsp;</td>
+	          </tr>
+	          <tr class="gridAlt">
+	            <td class="label">&nbsp;Host Allocation Type</td>
+	            <td class="gridTd">
+					<!-- jsp:getProperty name="alPlan" property="hostAllocationType" / --></font>&nbsp;</td>
+	          </tr>
+	          <tr class="grid">
+	            <td class="label">&nbsp;Plan Status</td>
+	            <td class="gridTd">
+					<jsp:getProperty name="alPlan" property="status" />&nbsp;</td>
+	          </tr>
+	          <tr class="gridAlt">
+	            <td class="label">&nbsp;Plan Create Date/Time</td>
+	            <td class="gridTd">
+					<jsp:getProperty name="alPlan" property="createDateTime" /></font>&nbsp;</td>
+	          </tr>
+	          <tr class="grid">
+	            <td class="label">&nbsp;Plan ID</td>
+	            <td class="gridTd">
+					<jsp:getProperty name="alPlan" property="subAllocationPlanId" />&nbsp;</td>
+	          </tr>
+	          <tr class="gridAlt">
+	            <td class="label">&nbsp;Allocation Plan Type</td>
+	            <td class="gridTd">
+					<jsp:getProperty name="alPlan" property="planType" />&nbsp;</td>
+	          </tr>
+	        </table>
+	      </td>
+	     </tr>
+	    </table>
+      </td>
+    </tr>
+    <tr>
+      <td class="wssTD100">
+        <table >
+          <%
+          List list = alPlan.getPlanList();
+          int i=1;
+          float total=0.0f;
+          %>
+    <tr>
+      <td width=95% colspan=8>
+        <div id="Content2" class="wssDivSubAllocation">
+<% if (alPlan.getPlanList().size()>0 && mode.equals("Create")) {
+      List types = alPlan.getTypeList();
+ %>
+                         Allocation Plan Type&nbsp;<select name="planType">
+<% 
+
+			for (Iterator it = types.iterator(); it.hasNext();) {
+			    AllocationPlanTypeBean pt = (AllocationPlanTypeBean) it.next();
+%>
+<option value="<%= pt.getSubAllocTypeCd() %>"><%= pt.getSubAllocTypeDesc() %></option>
+<% } %>
+
+</select>
+<% } %>
+          <input type="button" value="Add account" onclick="add();">
+          <table id="table1" width=98% class="table#dataTable" cellpadding="0" cellspacing="0" border="1">
+          <tbody>
+          <tr class='gridLabel'>
+            <td class="gridTd" width=33% align=left>Sequence</td>
+            <td class="gridTd" width=33% align=left>CSS Account Number</td>
+            <td class="gridTd" width=33% align=left>Allocation %</td>
+          </tr>
+
+            <%
+      String hideMe = "";
+
+      if (alPlan.getIsListBased()) {
+         hideMe = " style='visibility:hidden' ";
+      }
+			for (Iterator it = list.iterator(); it.hasNext();) {
+			    SubscriberAllocationBean sa = (SubscriberAllocationBean) it.next();
+		%>
+
+          <tr class='grid'>
+            <td width=33% class="gridTd"><input type="text" name="seq<%= i %>"  class="inputTextNew" size="40" maxlength="10" value="<%= i %>"></td>
+            <td width=33% class="gridTd"><input type="text" name="acct<%= i %>" class="inputTextNew" size="40" maxlength="15" value="<%= sa.getAccountId() %>" id="acct<%= i %>"></td>
+            <td width=33% class="gridTd"><input type="text" name="perc<%= i %>" class="inputTextNew" size="40" maxlength="10" value="<%= sa.getPercent() %>" id="perc<%= i %>" onchange="sum();" <%= hideMe %>></td>
+          </tr>
+          </tbody>
+              <% i++; total += Util.toFloat(sa.getPercent()); } %>
+          </table>
+          <input type="hidden" name="planId" value="<%= alPlan.getSubAllocationPlanId() %>">
+          <input type="submit" value="Submit">
+          <input type="button" value="Cancel" onclick="location.href='subscriberplan?planId=<%= alPlan.getSubAllocationPlanId() %>'">
+          <input type="text" value="<%= total %>" id="total" readonly>
+        </div>
+      </td>
+    </tr>
+        </table>
+      </td>
+    </tr>
+ <tr><td width="100%" align=center><font color=red><strong><%= errorMessage %> </strong></font></td></tr>
+<script type="text/javascript">
+  index = <%= i %>;
+</script>
+  </table>
+</div>
+<%@ include file="CMIncTop.jsp" %>
+<td class="wssTDMain"><b><font class="wssFontArial5">Value Stack <%= mode %> Satellite Plan</font></b></td>
+<%@ include file="IncLeft.jsp" %>
+<% DisplayVDERMenu("", out, response); %>
+<%@ include file="IncBottomAccount.jsp" %>
+</form>
+</body>
+</html>

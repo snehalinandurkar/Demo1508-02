@@ -1,0 +1,317 @@
+#
+# Self Service Override Properties File
+#
+
+# Authentication Plug In Settings:
+
+
+# Whether a class different than the default is performing the authentication (valid values true, false)
+# PARM com.splwg.selfservice.Authentication=false
+
+# Dynamic class name for Authentication
+# PARM com.splwg.selfservice.AuthenticationClassName=com.splwg.selfservice.DummyAuthentication
+
+
+
+# Doc1 PDF Settings:
+
+
+# Whether 'View' should be displayed next to the last bill in the Account Information screen (valid values true, false)
+# PARM com.splwg.selfservice.ShowBill=true
+
+# Timeout (in minutes) for cached bill PDFs
+# PARM com.splwg.selfservice.PDFCacheTimeout=60
+
+# Directory to be used for cached bill PDFs
+#
+# Use this parameter if you want to specify the location for the PDF cache.
+# If it is omitted, the default temporary directory will be used.
+#
+# com.splwg.selfservice.PDFCacheLocation=C:\\TEMP
+
+
+
+# Customer Contact Class and Type Settings:
+#
+# Use 'NONE' for the type, if you don't want to add customer contact:
+# e.g. com.splwg.selfservice.CustomerContactTypeLoginSuccess=NONE
+
+# Customer Contact Class in CorDaptix to be used when creating customer contacts for successful logins
+# PARM com.splwg.selfservice.CustomerContactClassLoginSuccess=WEB
+
+# Customer Contact Type for a successful login
+# PARM com.splwg.selfservice.CustomerContactTypeLoginSuccess=LOGIN
+
+# Customer Contact Class in CorDaptix to be used when creating customer contacts for failed logins
+# PARM com.splwg.selfservice.CustomerContactClassLoginFailure=WEB
+
+# Customer Contact Type for a failed login attempt
+# PARM com.splwg.selfservice.CustomerContactTypeLoginFailure=FAILLOGIN
+
+# Customer Contact Class in CorDaptix to be used when creating customer contacts for registrations
+# PARM com.splwg.selfservice.CustomerContactClassRegistration=WEB
+
+# Customer Contact Type for a successful registration
+# PARM com.splwg.selfservice.CustomerContactTypeRegistration=REGISTER
+
+# Customer Contact Class in CorDaptix to be used when creating customer contacts for the update of the personal info
+# PARM com.splwg.selfservice.CustomerContactClassPersonalInfoUpdate=WEB
+
+# Customer Contact Type for an update of personal info
+# PARM com.splwg.selfservice.CustomerContactTypePersonalInfoUpdate=PERSONALINFO
+
+# Customer Contact Class in CorDaptix to be used when creating customer contacts service stops
+# PARM com.splwg.selfservice.CustomerContactClassServiceDisconnect=SVC
+
+# Customer Contact Type for disconnecting service
+# PARM com.splwg.selfservice.CustomerContactTypeServiceDisconnect=STOP
+
+# Customer Contact Class in CorDaptix to be used when creating customer contacts for received payments
+# PARM com.splwg.selfservice.CustomerContactClassPaymentReceived=WEB
+
+# Customer Contact Type for performed payment
+# PARM com.splwg.selfservice.CustomerContactTypePaymentReceived=PAYRCV
+
+# Customer Contact Class in CorDaptix to be used when creating customer contacts for the creation of meter reads
+# PARM com.splwg.selfservice.CustomerContactClassMeterRead=WEB
+
+# Customer Contact Type for new meter read
+# PARM com.splwg.selfservice.CustomerContactTypeMeterRead=MTRREAD
+
+
+
+# To Do Type Settings:
+#
+# Use 'NONE' for Type, if you don't want the ToDo Type to be created:
+# e.g.: com.splwg.selfservice.MeterReadToDoType=NONE
+
+
+# To Do Type for Meter Reads failing High/Low
+# PARM com.splwg.selfservice.MeterReadToDoType=CI_WSSMR
+
+# To Do Type for Service Stop
+# PARM com.splwg.selfservice.ServiceStopToDoType=CI_WSSST
+
+# To Do Type for Update Personal Information
+# PARM com.splwg.selfservice.PersonalInfoToDoType=CI_WSSPE
+
+# To Do Type for Administrator Information
+# PARM com.splwg.selfservice.AdminToDoType=CI_WSSAD
+
+
+
+# Payment related Settings:
+
+
+# Currency code to use for payments
+# PARM com.splwg.selfservice.CurrencyCode=USD
+
+# Auto Pay Source Codes for Credit Cards:
+
+# Auto Pay Source Code for Visa
+# PARM com.splwg.selfservice.AutoPay.Visa=VISA
+
+# Auto Pay Source Code for MasterCard
+# PARM com.splwg.selfservice.AutoPay.MasterCard=MASTERCARD
+
+# Auto Pay Source Code for Discover
+# PARM com.splwg.selfservice.AutoPay.Discover=DISCOVER
+
+# Auto Pay Source Code for AmericanExpress
+# PARM com.splwg.selfservice.AutoPay.AmericanExpress=AMEX
+
+
+# Credit Card Validation Plug In Settings:
+
+
+# Whether a class is validating the credit card (valid values true, false)
+# PARM com.splwg.selfservice.CreditCardValidation=true
+
+# Dynamic class name for CreditCardValidation
+# PARM com.splwg.selfservice.CreditCardValidationClassName=com.splwg.selfservice.DummyCreditCardValidation
+
+# Meter Read related Settings:
+
+# Which Meter Read Source should be used
+# PARM com.splwg.selfservice.MeterReadSource=WEB
+
+
+# Location related Settings:
+
+
+# CorDaptix phone type used for home phone numbers
+# PARM com.splwg.selfservice.PhoneTypeHome=PRIMARY
+
+# CorDaptix phone type used for business phone numbers
+# PARM com.splwg.selfservice.PhoneTypeBusiness=SECONDARY
+
+# Phone format used on Update Personal Information screen
+# PARM com.splwg.selfservice.PhoneFormat=(999) 999-9999
+
+# Date format used by XAI (set in XAI Formats control table) for dates sent to XAI
+# PARM com.splwg.selfservice.XAIDateFormat=yyyy-MM-dd
+
+# Date format used to display dates received from XAI
+# PARM com.splwg.selfservice.CorDaptixDateFormat=MM-dd-yyyy
+
+# Date-Time format used by XAI (set in XAI Formats control table) for Date/Time sent to XAI
+# PARM com.splwg.selfservice.XAIDateTimeFormat=yyyy-MM-dd HH:mm:ss
+
+# Date-Time format used to display date/times received from XAI
+# PARM com.splwg.selfservice.CorDaptixDateTimeFormat=MM-dd-yyyy HH:mm:ss
+
+# Number format to be used for Amounts sent to XAI
+# PARM com.splwg.selfservice.XAINumberFormat=#####0.00
+
+# Number format to be used to display amounts received from XAI (should be identical to the display profile used)
+# PARM com.splwg.selfservice.CorDaptixNumberFormat=###,##0.00
+
+
+
+# E-Mail related Settings:
+
+# Whether an email will be sent (should be set to no when no SMTP server can be reached); valid values: true, false
+# PARM com.splwg.selfservice.SendEmail=true
+
+# Subject of Mail
+# PARM com.splwg.selfservice.EmailSubject=Your User and Password
+
+# Subject of Registration Mail
+# PARM com.splwg.selfservice.RegistrationEmailSubject=Your registered User and Password
+
+# From Address:
+# PARM com.splwg.selfservice.FromAddress=administrator@company.com
+
+
+# Phone Label related settings:
+
+# Customer Info Zone Home Phone Label
+# PARM com.splwg.selfservice.CustomerInformationHomePhone=Primary Telephone Number
+
+# Customer Info Zone Business Phone Label
+# PARM com.splwg.selfservice.CustomerInformationBusinessPhone=Secondary Telephone Number
+
+# Customer Info Zone Email Address Label
+# PARM com.splwg.selfservice.CustomerInformationEmailAddress=Email Address
+
+
+# Actions:
+# The following section allows the dynamic definition of additional actions. The property name must start with 
+# "com.splwg.selfservice.Action" and after that it contains the action name. The property value is the class name.
+# Following two examples:
+
+# PARM com.splwg.selfservice.Action.financialhistory=com.splwg.selfservice.AccountFinancialHistoryAction
+# PARM com.splwg.selfservice.Action.billinghistory=com.splwg.selfservice.BillingHistoryAction
+
+# New View Bill Action, replacing the base one, downloads and sends back
+# a pdf image of the bill created by Crystal Report
+com.splwg.selfservice.Action.viewbill=com.splwg.selfservice.CMViewBillAction
+
+# Report parameters, taken from Report Options table
+# Crystal Report User Id
+com.splwg.selfservice.REPORTING_TOOL_USER_ID=administrator
+# Crystal Report User Password encrypted
+com.splwg.selfservice.REPORTING_TOOL_PASSWORD=21224E4D2443030F1021
+# Crystal Report Server (Address:Port)
+com.splwg.selfservice.REPORTING_SERVER=http://steamccbrpt:8080
+# Crystal Report Server Folder  (dev-env = CONED-PROD, prod-env = CONED-PROD)
+com.splwg.selfservice.REPORTING_FOLDER=CONED-PROD
+# Crystal Report Code
+com.splwg.selfservice.REPORT_CD=CM_BILLPR
+# CC&B User Id
+com.splwg.selfservice.REPORT_CDXUSER=SPL
+# CC&B Language Cd
+com.splwg.selfservice.REPORT_LANGUAGE=ENG
+# Crystal Report Action Code
+com.splwg.selfservice.REPORT_ACTION=FILE
+
+# Timeout (in minutes) for cached bill PDFs
+com.splwg.selfservice.PDFCacheTimeout=60
+
+# Directory to be used for cached bill PDFs
+#
+# Use this parameter if you want to specify the location for the PDF cache.
+# If it is omitted, the default temporary directory will be used.
+#
+# com.splwg.selfservice.PDFCacheLocation=C:\\TEMP
+
+
+# CEd9 - EPagaduan - Start Add
+# ADS details
+# ADS dn
+com.splwg.selfservice.ADSdn=DC=conedison,DC=net
+# ADS host
+com.splwg.selfservice.ADShost=ldap://adsite9.conedison.net:389
+# ADS aMAccountName
+com.splwg.selfservice.ADSaMAccountName=sAMAccountName
+# ADS domain
+com.splwg.selfservice.ADSdomain=@conedison.net
+# ADS Super User Group
+com.splwg.selfservice.suGroup=SUPER_USER
+
+# Additional Actions 
+com.splwg.selfservice.Action.suauthenticate=com.splwg.selfservice.CMSSvcSUserAuthAction
+com.splwg.selfservice.Action.sulogin=com.splwg.selfservice.CMSSvcSULoginAction
+# CEd9 - EPagaduan - End Add
+
+# Additional fix for Bill/Quotes error
+com.splwg.selfservice.BillRouteTypeCrystal=CRYSTAL
+com.splwg.selfservice.BillRouteTypeEbill=E-BILL
+
+# SR511 Part 1 - EPagaduan - Start Add
+# Bill Route Message
+com.splwg.selfservice.BillRouteMessage=E*bill is a secure way to receive and view your Con Edison bill online. Say goodbye to paper bills. Each month, we'll notify you via e-mail when your bill is ready for viewing. To enroll simply choose the option under the 'Update Personal Info' menu.
+# Additional Action
+com.splwg.selfservice.Action.account=com.splwg.selfservice.CMAccountInformationAction
+# SR511 Part 1 - EPagaduan - End Add
+
+# SR511 Part 3 - EPagaduan - Start Add
+# E-Bil EMail Settings
+# E-Bill Enrolment Email Subject
+com.splwg.selfservice.EBillEnrolmentEmailSubject=E-Bill Enrollment Confirmation
+# E-Bill Unenrolment Email Subject
+com.splwg.selfservice.EBillUnenrolmentEmailSubject=E-Bill DeEnrollment Confirmation
+# E-Bill Enrollment/Unenrollment From Address:
+com.splwg.selfservice.EBillFromAddress=steambill@coned.com
+# E-Bill Enrolment EMail File
+com.splwg.selfservice.EBillEnrolEmailFileLocation=\EBillEnrolEmailFile.txt
+# E-Bill Unenrolment EMail File
+com.splwg.selfservice.EBillUnenrolEmailFileLocation=\EBillUnenrolEmailFile.txt
+# E-Bill Customer Contact Class and Type Settings
+# Customer Contact Type for EBill Enrolment
+com.splwg.selfservice.CustomerContactTypeEBillEnrolment=REGEBILL
+# Customer Contact Type for EBill Enrolment
+com.splwg.selfservice.CustomerContactTypeEBillUnenrolment=UNREBILL
+# Customer Contact Class in CorDaptix to be used used for EBILL enrollment and unenrollment
+com.splwg.selfservice.CustomerContactClassForEBill=WEB
+# EBill Message Settings
+com.splwg.selfservice.EBillUnregisterMessage=Your next bill will be printed and mailed using the mailing address provided. You will not receive any future email notification.
+com.splwg.selfservice.EBillRegisterMessage=Your next bill will not be printed. Instead, an email notification will be sent to the email address provided.
+# SR511 Part 3 - EPagaduan - End Add
+
+
+# CEd10 - SMedina - Start Add
+# Payment Option Action Class
+com.splwg.selfservice.Action.paymentoptions=com.splwg.selfservice.CMSSvcPaymentOptionsAction
+# Auto Pay EMail Settings
+# Auto Pay Enrollment Email Subject
+com.splwg.selfservice.AutoPayEnrollEmailSubject=Direct Payment Plan Enrollment Confirmation
+# Auto Pay Update Email Subject
+com.splwg.selfservice.AutoPayUpdateEmailSubject=Direct Payment Plan Update Confirmation
+# Auto Pay Enrollment/Update From Address:
+com.splwg.selfservice.AutoPayFromAddress=steambill@coned.com
+# Auto Pay Enrollment EMail File
+com.splwg.selfservice.AutoPayEnrollEmailFileLocation=\AutoPayEnrollEmailFile.txt
+# Auto Pay Update EMail File
+com.splwg.selfservice.AutoPayUpdateEmailFileLocation=\AutopayUpdateEmailFile.txt
+# CEd10 - SMedina - End Add
+
+# CEd10 - EPagaduan - Start Add
+# Payment EMail Settings
+# Payment Email Subject
+com.splwg.selfservice.PaymentEmailSubject=One-Time Payment Confirmation
+# Payment Email From Address:
+com.splwg.selfservice.PaymentFromAddress=steambill@coned.com
+# Payment EMail File
+com.splwg.selfservice.PaymentEmailFileLocation=\PaymentEmailFile.txt
+# CEd10 - EPagaduan - End Add

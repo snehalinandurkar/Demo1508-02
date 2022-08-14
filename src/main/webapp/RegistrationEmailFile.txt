@@ -1,0 +1,12 @@
+Congratulations! 
+
+You have successfully enrolled for Con Edison's Steam Web Self Service. 
+Your user is '@user@', and your password is '@password@'.
+
+Feel free to turn with any issues to our customer hotline at
+1-212-780-8855.
+
+Best Regards,
+
+Customer Operations
+Consolidated Edison Company of New York
