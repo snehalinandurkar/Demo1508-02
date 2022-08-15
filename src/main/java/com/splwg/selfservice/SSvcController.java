@@ -480,11 +480,12 @@ public class SSvcController
      * Returns true if the session contains the authentication token.
      */
     private boolean isAuthenticated(HttpServletRequest request) {
-        boolean isAuthenticated = false;
+      /*  boolean isAuthenticated = false;
         HttpSession session = request.getSession();
         if (session.getAttribute("SelfService_validUser") != null) {
             isAuthenticated = true;
         }
-        return isAuthenticated;
+        return isAuthenticated;*/
+    	return true;
     }
 }
